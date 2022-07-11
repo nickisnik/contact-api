@@ -4,7 +4,7 @@ const cors = require('cors')
 const nodemailer = require('nodemailer')
 const bodyParser = require('body-parser');
 require('dotenv').config()
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
