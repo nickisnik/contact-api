@@ -7,5 +7,22 @@
   "devDependencies": {
     "dotenv": "^16.0.1",
     "nodemon": "^2.0.19"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "contact-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickisnik/contact-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickisnik/contact-api/issues"
+  },
+  "homepage": "https://github.com/nickisnik/contact-api#readme",
+  "description": ""
 }
