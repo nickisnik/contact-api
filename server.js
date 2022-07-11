@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors')
 const nodemailer = require('nodemailer')
 const bodyParser = require('body-parser');
-require('dotenv').config()
+//require('dotenv').config()
 app.listen(process.env.PORT || 3001);
 
 app.use(bodyParser.urlencoded({ extended: true }));
