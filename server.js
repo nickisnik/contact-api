@@ -9,7 +9,7 @@ app.listen(process.env.PORT || 3001);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors( {
-    origin: '*'
+    origin: 'https://nicknik.com/contact'
 }));
 
 app.get('/', (req, res) => {
@@ -17,7 +17,14 @@ app.get('/', (req, res) => {
 })
 
 app.post('/contact', (req, res) => {
-    sendFeedback(req.body.name, req.body.email, req.body.message)
+    try {
+        sendFeedback(req.body.name, req.body.email, req.body.message)
+        res.status(200).send('Message sent!')
+    }
+    catch (err) {
+        res.status(500).send('Server error')
+    }
+   
 })
 
 const sendFeedback = (name, email, message) => {
